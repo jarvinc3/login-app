@@ -1,0 +1,189 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container-principal {
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 0 40px;
+}
+
+.nav-container-superior {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 130.174px;
+    height: 18px;
+}
+
+.modal-nombre-foto {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    justify-content: space-between;
+}
+
+.foto-perfil {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+}
+
+.modal-nombre-foto>h2 {
+    color: var(--gray-1, #333);
+    font-family: Noto Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.42px;
+}
+
+.nav-container-inferior {
+    height: 110px;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-container-inferior>h1 {
+    color: #000;
+    font-family: Noto Sans;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.26px;
+}
+
+.nav-container-inferior>p {
+    color: #000;
+    font-family: Noto Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -0.63px;
+}
+
+main {
+    width: 845.911px;
+    border-radius: 12px;
+    border: 1px solid #E0E0E0;
+}
+
+.section-up {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 30px;
+}
+
+hr {
+    border-top: 0.1px #E0E0E0;
+}
+
+.div-information>h1 {
+    color: #000;
+    font-family: Noto Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.84px;
+}
+
+.div-information>p {
+    color: #828282;
+    font-family: Noto Sans;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.455px;
+}
+
+.btn-edit{
+    width: 95.343px;
+    height: 38px;
+    border-radius: 12px;
+    border: 1px solid #828282;
+    color: #828282;
+    font-family: Noto Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.56px;
+    background: transparent;
+}
+
+.div {
+    width: 275px;
+}
+
+.div>p {
+    color: #BDBDBD;
+    font-family: Noto Sans;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.455px;
+}
+
+.div-2 > p{
+    color: #333;
+    font-family: Noto Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.63px;
+    padding: 10px 0;
+}
+
+.foto-perfil-high {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 840px;
+    margin: 20px 0;
+}
+
+header > p {
+    color: #828282;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.49px;
+}

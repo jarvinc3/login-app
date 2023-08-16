@@ -1,0 +1,252 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.principal-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark{
+    background: #252329;
+}
+
+main.all-information-login {
+    border-radius: 25px;
+    border: 1px solid #BDBDBD;
+    padding: 30px 40px 40px;
+    width: 400px;
+}
+
+.div-img {
+    padding: 0 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+img.logo {
+    width: 130.174px;
+    height: 18px;
+}
+
+button#dark-mode-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dark-mode-btn:hover{
+    border-radius: 24px;
+    color: #FFF;
+    
+}
+
+#dark-mode-btn > span:hover{
+    box-shadow: 1px 1px 15px 1px #b3b3b3;
+    border-radius: 24px;
+    background: #d5d5d5 ;
+}
+
+.white > span {
+    color: white !important; 
+}
+
+.white> span:hover{
+    box-shadow: 1px 1px 15px 1px #6c6c6c;
+    background: #525252 !important;
+    border-radius: 24px;
+}
+
+.information-inicio {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.information-inicio > h2 {
+    color: #333;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.63px;
+}
+
+.inicio > h2{
+    color: #E0E0E0;
+}
+
+.information-inicio > p {
+    color: #333;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.56px;
+}
+
+.inicio > p{
+    color: #E0E0E0;
+}
+
+.inputs {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid #BDBDBD;
+    padding: 0 10px;
+    gap: 5px;
+    height: 45px;
+}
+
+span.material-symbols-outlined {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    color: #828282;
+}
+
+input{
+    border-style: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn{
+    border-style: none;
+    border-radius: 8px;
+    background: #2F80ED;
+    height: 35px;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.56px;
+}
+
+.btn:hover{
+    background: #225ba4;
+}
+
+
+section.redes-sociales-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.redes-container {
+    display: flex;
+    gap: 15px;
+}
+
+.redes-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    color: #828282;
+    border: solid 1px;
+    border-radius: 20px;
+}
+
+.redes-icon-container:hover {
+    background: #868686;
+    color: #FFF;
+}
+
+.login-option {
+    display: flex;
+    gap: 3px;
+}
+
+.text1 {
+    color: #828282;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.49px;
+}
+
+.text2 {
+    color: #828282;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.49px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.text3 {
+    color: #2D9CDB;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.49px;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    gap: 160px;
+    margin: 10px;
+}
+
+header > p {
+    color: #828282;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.49px;
+}
+
+@media screen and (max-width: 375px) {
+    .principal-container {
+        justify-content: space-between;
+    }
+    main.all-information-login {
+        padding: 10px 30px;
+        width: 375px;
+        border: none;
+    }
+    header{
+        gap: 0;
+        margin: 0;
+    }
+  }
