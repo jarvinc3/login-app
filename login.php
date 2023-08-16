@@ -27,7 +27,7 @@
             <form class="login-container" action="loginAction.php" method="post">
                 <div class="inputs">
                     <span class="material-symbols-outlined">mail</span>
-                    <input name="email" type="text" placeholder="Email">
+                    <input name="email" type="email" placeholder="Email">
                 </div>
                 <div class="inputs">
                     <span class="material-symbols-outlined">lock</span>

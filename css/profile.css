@@ -5,7 +5,7 @@
 }
 
 .container-principal {
-    padding: 20px 50px;
+    padding: 30px 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,6 +17,18 @@ nav {
     align-items: center;
     width: 100%;
     padding: 0 0 40px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
 }
 
 .nav-container-superior {
@@ -62,6 +74,25 @@ nav {
     align-items: center;
 }
 
+.nav-containerInferior {
+    height: 80px;
+    width: 63%;
+    display: flex;
+    align-items: center;
+}
+
+.back {
+    display: flex;
+    align-items: flex-end;
+    color: #2D9CDB;
+    font-family: Noto Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.63px;
+}
+
 .nav-container-inferior>h1 {
     color: #000;
     font-family: Noto Sans;
@@ -101,11 +132,44 @@ section {
     padding: 10px 30px;
 }
 
+input[type="text"] {
+    width: 416.932px;
+    height: 52px;
+    border-radius: 12px;
+    border: 1px solid #828282;
+    padding: 0 20px;
+}
+
+input.input {
+    width: 416.932px;
+    height: 91.578px;
+}
+
+input::placeholder{
+    color: #BDBDBD;
+font-family: Noto Sans;
+font-size: 13px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: -0.455px;
+}
+
 hr {
     border-top: 0.1px #E0E0E0;
 }
 
-.div-information>h1 {
+.div-information>h2 {
+    color: #000;
+    font-family: Noto Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.84px;
+}
+
+h2.h2 {
     color: #000;
     font-family: Noto Sans;
     font-size: 24px;
@@ -125,6 +189,10 @@ hr {
     letter-spacing: -0.455px;
 }
 
+.p {
+    color: #4F4F4F !important;
+}
+
 .btn-edit{
     width: 95.343px;
     height: 38px;
@@ -138,6 +206,10 @@ hr {
     line-height: normal;
     letter-spacing: -0.56px;
     background: transparent;
+}
+
+.btn-edit:hover{
+    background: #dadada;
 }
 
 .div {
@@ -165,11 +237,54 @@ hr {
     padding: 10px 0;
 }
 
+p.change-photo {
+    color: #828282;
+    font-family: Noto Sans;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.455px;
+}
+
 .foto-perfil-high {
     width: 70px;
     height: 70px;
-    border-radius: 5px;
+    border-radius: 8px;
 }
+
+.div-2 {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.div-edit {
+    padding: 10px 33px 30px;
+}
+
+button.btn-save {
+    border-radius: 8px;
+    background: #2F80ED;
+    width: 82px;
+    height: 38px;
+    border-style: none;
+}
+
+button.btn-save:hover{
+    background: #225fae;
+}
+
+button.btn-save {
+    color: #FFF;
+    font-family: Noto Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.56px;
+}
+
 
 header {
     display: flex;

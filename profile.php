@@ -14,7 +14,7 @@ session_start();
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Profile</title>
 </head>
 
 <body>
@@ -40,7 +40,7 @@ session_start();
                     <h2>Profile</h2>
                     <p>Some info may be visible to other people</p>
                 </div>
-                <div class="div-edit"><button class="btn-edit">Edit</button></div>
+                <div class="div-edit"><a href="./edit.php"><button class="btn-edit">Edit</button></a></div>
             </section>
             <hr>
             <section>

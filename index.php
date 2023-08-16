@@ -31,7 +31,7 @@
             <form class="login-container" action="conexion.php" method="post">
                 <div class="inputs">
                     <span class="material-symbols-outlined">mail</span>
-                    <input name="email" type="text" placeholder="Email" required oninvalid="this.setCustomValidity('Agregue un Correo')"  oninput="this.setCustomValidity('')">
+                    <input name="email" type="email" placeholder="Email" required oninvalid="this.setCustomValidity('Agregue un Correo')"  oninput="this.setCustomValidity('')">
                 </div>
                 <div class="inputs">
                     <span class="material-symbols-outlined">lock</span>
