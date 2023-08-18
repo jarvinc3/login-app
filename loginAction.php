@@ -10,6 +10,11 @@ try {
     if ($resultado['email'] == $correo && $resultado['pssword'] == $password) {
         session_start();
         $_SESSION['email'] =  $resultado['email'];
+        $_SESSION['pswrd'] =  $resultado['pssword'];
+        $_SESSION['id'] =  $resultado['id'];
+        $_SESSION['phone'] =  $resultado['phone'];
+        $_SESSION['bio'] =  $resultado['biografia'];
+        $_SESSION['name'] =  $resultado['name'];
         header("Location: profile.php");
         exit();
     }

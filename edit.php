@@ -1,5 +1,9 @@
 <?php 
 session_start();
+if(!isset($_SESSION['email'])){
+    header('Location: login.php');
+    exit();
+} else {
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +18,7 @@ session_start();
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="profile.js" defer></script>
     <title>Edit</title>
 </head>
 
@@ -25,8 +30,21 @@ session_start();
                 <img class="logo" src="./img/iconoLogo.jpg" alt="devchallenges">
                 <div class="modal-nombre-foto">
                     <img class="foto-perfil" src="./img/zoro.png" alt="">
-                    <h2>Xantle Neal</h2>
-                    <span class="material-symbols-outlined flechita"> arrow_drop_down</span>
+                    <h2><?php echo $_SESSION['name'] ?></h2>
+                    <span id="flechita" class="material-symbols-outlined flechita"> arrow_drop_down</span>
+                    <form class="nav-bar close" id="navBar" action="close.php">
+                            <p><span class="material-symbols-outlined profile">account_circle</span>My Profile</p>
+                            <p><span class="material-symbols-outlined">group</span> GroupChat</p>
+                            <hr>
+                            <button type="submit">
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+                                        <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                                    </svg> Logout
+                                </p>
+                            </button>
+                        </form>
                 </div>
             </div>
             <div class="nav-containerInferior">  
@@ -40,7 +58,7 @@ session_start();
                     <p>Changes will be reflected to every services</p>
                 </div>
             </section>
-            <form action="">
+            <form action="editAction.php" method="post">
                 <section>
                     <div class="div-2">
                         <img class="foto-perfil-high" src="./img/zoro.png" alt="">
@@ -51,7 +69,7 @@ session_start();
                 <section>
                     <div class="div">
                         <p class="p">NAME</p>
-                        <input type="text" placeholder="Enter your name">
+                        <input type="text" placeholder="Enter your name" name="name" value="<?php echo $_SESSION['name'] ?>" >
                     </div>
                     
                 </section>
@@ -59,7 +77,7 @@ session_start();
                 <section>
                     <div class="div ">
                         <p class="p">BIO</p>
-                        <input class="input" type="text" placeholder="Enter your name">
+                        <input class="input" type="text" placeholder="Enter your name" name="bio" value="<?php echo $_SESSION['bio'] ?>" >
                     </div>
                     
                 </section>
@@ -67,7 +85,7 @@ session_start();
                 <section>
                     <div class="div">
                         <p class="p">PHONE</p>
-                        <input type="text" placeholder="Enter your name">
+                        <input type="text" placeholder="Enter your name" name="phone" value="<?php echo $_SESSION['phone'] ?>" >
                     </div>
                     
                 </section>
@@ -75,7 +93,7 @@ session_start();
                 <section>
                     <div class="div">
                         <p class="p">EMAIL</p>
-                        <input type="text" placeholder="Enter your name">
+                        <input type="email" placeholder="Enter your name" value="<?php echo $_SESSION['email'] ?>" name="email">
                     </div>
                     
                 </section>
@@ -83,7 +101,7 @@ session_start();
                 <section>
                     <div class="div">
                         <p class="p">PASSWORD</p>
-                        <input type="text" placeholder="Enter your name">
+                        <input type="password" placeholder="Enter your name" value="<?php echo $_SESSION['pswrd'] ?>" name="pswrd">
                     </div>
                     
                 </section>
@@ -99,3 +117,4 @@ session_start();
 </body>
 
 </html>
+<?php } ?>

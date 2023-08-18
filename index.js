@@ -1,7 +1,6 @@
 const darkModeBtn = document.querySelector("#dark-mode-btn");
 const principalContainer = document.querySelector(".principal-container");
 const informationInicio = document.querySelector(".information-inicio");
-const icon = darkModeBtn.querySelector("span");
 const logo = document.querySelector(".logo");
 
 darkModeBtn.addEventListener("click", () => {
