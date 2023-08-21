@@ -1,5 +1,18 @@
 <?php
 session_start();
+    if (!isset($_SESSION['email'])) {
+        header('location:login.php');
+        exit();
+    }else{
+
+$id = $_SESSION['id'];
+
+require_once"conexiondb.php";
+$stmt = $mysqli->query("SELECT id, photo FROM users WHERE id = '$id' ");
+
+while ($row = $stmt->fetch_assoc()) {
+    $dataImg = base64_encode($row["photo"]);
+
 if (!isset($_SESSION['email'])) {
     header('Location: login.php');
     exit();
@@ -17,7 +30,7 @@ if (!isset($_SESSION['email'])) {
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
-        <script src="profile.js" defer></script>
+        <script src="./js/profile.js" defer></script>
         <title>Profile</title>
     </head>
 
@@ -28,8 +41,7 @@ if (!isset($_SESSION['email'])) {
                 <div class="nav-container-superior">
                     <img class="logo" src="./img/iconoLogo.jpg" alt="devchallenges">
                     <div class="modal-nombre-foto">
-                        <button id="dark-mode-btn"><span class="material-symbols-outlined">nightlight</span></button>
-                        <img class="foto-perfil" src="./img/zoro.png" alt="">
+                    <?php echo "<img class='foto-perfil' src='data:image/jpg;base64, $dataImg' alt='foto de perfil'>";?>
                         <h2><?php echo $_SESSION['name'] ?></h2>
                         <span id="flechita" class="material-symbols-outlined flechita"> arrow_drop_down</span>
                         <form class="nav-bar close" id="navBar" action="close.php">
@@ -66,7 +78,7 @@ if (!isset($_SESSION['email'])) {
                         <p>PHOTO</p>
                     </div>
                     <div class="div-2">
-                        <img class="foto-perfil-high" src="./img/zoro.png" alt="">
+                        <?php echo "<img class='foto-perfil-high' src='data:image/jpg;base64, $dataImg' alt='foto de perfil'>";}?>
                     </div>
                 </section>
                 <hr>
@@ -111,7 +123,7 @@ if (!isset($_SESSION['email'])) {
                         <p>PASSWORD</p>
                     </div>
                     <div class="div-2">
-                        <p><?php echo $_SESSION['pswrd'] ?></p>
+                        <p>************</p>
                     </div>
                 </section>
             </main>
@@ -124,4 +136,4 @@ if (!isset($_SESSION['email'])) {
     </body>
 
     </html>
-<?php } ?>
+<?php }}?>

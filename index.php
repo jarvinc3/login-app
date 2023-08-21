@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <script src="index.js" defer></script>
+    <script src="./js/index.js" defer></script>
     <title>Autentication App</title>
 </head>
 
@@ -18,7 +18,6 @@
         <main class="all-information-login">
             <div class="div-img">
                 <img class="logo" src="./img/iconoLogo.jpg" alt="">
-                <button id="dark-mode-btn"><span class="material-symbols-outlined">nightlight</span></button>
             </div>
             <section class="information-inicio">
                 <h2>

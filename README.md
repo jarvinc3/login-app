@@ -1,9 +1,10 @@
 # mini-proyecto-lvl3
 
-Agregué el modo oscuro.
+Agregué un alert cuando no agregas el correo o contraseña.
 
-Añadí la vista responsive.
+Utilicé en algunos aspectos bootstrap.
 
-Agregué un alert cuando no agregas correctamente el correo o contraseña.
+para iniciar secion utilice la siguiente cuenta:
 
-Utilicé algunos logos de bootstrap.
+mangomc03@gmail.com
+jarvin313

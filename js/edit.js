@@ -1,12 +1,5 @@
-const closeArrow = document.querySelector("#flechita");
+const closeArrow = document.querySelector("#flecha");
 const navBar = document.querySelector("#navBar");
-const darkModeBtn = document.querySelector("#dark-mode-btn");
-const principalContainer = document.querySelector(".container-principal");
-
-
-darkModeBtn.addEventListener("click", () => {
-  principalContainer.classList.toggle("dark");
-});
 
 closeArrow.addEventListener("click", () => {
   navBar.classList.toggle("close");

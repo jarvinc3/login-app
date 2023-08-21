@@ -4,10 +4,10 @@ $password = $_POST["pswrd"];
 
 try {
     $mysqli = new mysqli("localhost", "root", "", "miniproyecto");
-    $consulta = $mysqli->query("SELECT * FROM `users` WHERE email = '$correo' and pssword = '$password'");
+    $consulta = $mysqli->query("SELECT * FROM `users` WHERE email = '$correo'");
     $resultado = $consulta->fetch_assoc();
    
-    if ($resultado['email'] == $correo && $resultado['pssword'] == $password) {
+    if (password_verify($password, $resultado['pssword'])) {
         session_start();
         $_SESSION['email'] =  $resultado['email'];
         $_SESSION['pswrd'] =  $resultado['pssword'];
@@ -17,6 +17,9 @@ try {
         $_SESSION['name'] =  $resultado['name'];
         header("Location: profile.php");
         exit();
+    }else {
+        echo"contraseña incorrecta";
+        header("location:login.php");
     }
 } catch(mysqli_sql_exception $e) {
     echo "Error" . $e->getMessage();

@@ -13,8 +13,9 @@ try {
         
     } else {
     session_start();
-    $mysqli->query("INSERT INTO users(email, pssword) VALUES ('$correo', '$password');");
-    $consulta = $mysqli->query("SELECT * FROM `users` WHERE email = '$correo' and pssword = '$password'");
+    $passHash = password_hash($password, PASSWORD_DEFAULT);
+    $mysqli->query("INSERT INTO users(email, pssword) VALUES ('$correo', '$passHash');");
+    $consulta = $mysqli->query("SELECT * FROM `users` WHERE email = '$correo' ");
     $resultado = $consulta->fetch_assoc();
     $_SESSION['email'] =  $resultado['email'];
     $_SESSION['pswrd'] =  $resultado['pssword'];

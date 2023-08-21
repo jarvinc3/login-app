@@ -118,6 +118,14 @@ a {
     flex-shrink: 0;
 }
 
+.profile {
+    color: #4F4F4F;
+}
+a {
+    text-decoration: none;
+    display: contents;
+}
+
 .nav-bar>button {
     color: var(--red, #EB5757);
     font-family: Noto Sans;
@@ -163,7 +171,7 @@ a {
 
 .nav-containerInferior {
     height: 80px;
-    width: 68%;
+    width: 65%;
     display: flex;
     align-items: center;
 }
@@ -240,6 +248,21 @@ input::placeholder {
     font-weight: 500;
     line-height: normal;
     letter-spacing: -0.455px;
+}
+
+#img {
+    width: 70px;
+    height: 70px;
+    border-style: none;
+    position: absolute;
+    padding: 0 0 0 24px;
+    background: #00000057;
+    border-radius: 8px;
+    padding-top: 23px;
+}
+
+#img > span {
+    color: white;
 }
 
 hr {
